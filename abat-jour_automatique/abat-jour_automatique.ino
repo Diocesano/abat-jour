@@ -78,7 +78,7 @@
 
 */
 
-int rele = 13;
+int rele = 8;
 int recebido;
 int auxiliar;
 
