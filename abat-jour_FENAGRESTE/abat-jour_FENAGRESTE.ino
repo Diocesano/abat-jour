@@ -6,7 +6,13 @@
     Maria Clara Taumaturgo Souza - 2015236@aluno.diocesanocaruaru.g12.br
   #Orientador: Prof. Diógenes Souza - diogenessouza@diocesanocaruaru.g12.br
   #Repositório do projeto no GitHub: https://github.com/Diocesano/abat-jour
+  
   #Descrição:
+  Pretendemos evitar o desperdício de energia que acontece quando a lâmpada permanece
+  acesa durante todo o sono do indivíduo nictofóbico. Com a economia de energia, também
+  será economizado dinheiro, além de contribuir para a diminuição da demanda de energia,
+  que é cada vez maior no mundo. O dispositivo apaga a luz depois que a pessoa dorme. 
+
   #Componentes:
     ->1 placa baseada no Arduino Uno R3, utilizando o
       microcontrolador Atmel Atmega328p
@@ -26,7 +32,7 @@
          | [ ]RST                   MOSI/11[ ]~|
          | [ ]3V3    +---+               10[ ]~|
          | [ ]5v    -| A |-               9[ ]~|
-         | [ ]GND   -| R |-               8[ ] |
+         | [ ]GND   -| R |-               8[Z] |
          | [ ]GND   -| D |-                    |
          | [ ]Vin   -| U |-               7[ ] |
          |          -| I |-               6[ ]~|
@@ -34,11 +40,14 @@
          | [ ]A1    -| O |-               4[ ] |
          | [ ]A2     +---+           INT1/3[ ]~|
          | [ ]A3                     INT0/2[ ] |
-         | [ ]A4/SDA  RST SCK MISO     TX>1[ ] |
-         | [ ]A5/SCL  [ ] [ ] [ ]      RX<0[ ] |
+         | [ ]A4/SDA  RST SCK MISO     TX>1[X] |
+         | [ ]A5/SCL  [ ] [ ] [ ]      RX<0[Y] |
          |            [ ] [ ] [ ]              |
          |  UNO_R3    GND MOSI 5V  ____________/
           \_______________________/
+
+          X e Y = HC-06
+          Z = Relay
   ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
       LICENÇA - Copyright 2018 Débora, Erick, Maria Clara e Diógenes
   ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
